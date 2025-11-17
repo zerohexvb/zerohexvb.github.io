@@ -1,0 +1,10 @@
+.social-links a {
+  margin-right: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: opacity 0.25s ease;
+}
+
+.social-links a:hover {
+  opacity: 0.6;
+}
