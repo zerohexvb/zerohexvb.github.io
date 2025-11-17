@@ -1,127 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZEROHE XVB | Cybersecurity Portfolio</title>
-    <style>
-        body {
-            background: #0a0a0f;
-            margin: 0;
-            font-family: Consolas, monospace;
-            color: #00eaff;
-        }
-        header {
-            padding: 80px 20px;
-            text-align: center;
-            background: linear-gradient(180deg, #0f0f1a, #09090f);
-            border-bottom: 2px solid #00eaff;
-        }
-        h1 {
-            font-size: 60px;
-            letter-spacing: 4px;
-            text-shadow: 0 0 10px #00eaff;
-            animation: glitch 1.5s infinite;
-        }
-        @keyframes glitch {
-            0% { text-shadow: 0 0 4px #00eaff; }
-            50% { text-shadow: 0 0 15px #00eaff; }
-            100% { text-shadow: 0 0 4px #00eaff; }
-        }
-        .subtitle {
-            font-size: 20px;
-            color: #72d7ff;
-            margin-top: 10px;
-            opacity: 0.9;
-        }
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-        .card {
-            border: 1px solid #00eaff;
-            padding: 25px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            background: rgba(10, 10, 20, 0.7);
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
-        }
-        h2 {
-            color: #00eaff;
-            border-bottom: 1px dashed #00eaff;
-            padding-bottom: 10px;
-        }
-        a {
-            color: #00eaff;
-        }
-        ul li {
-            margin-bottom: 8px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #004c54;
-            font-size: 14px;
-            margin-top: 40px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ZEROHE XVB | Cybersecurity Portfolio</title>
+  <style>
+    /* -- Paper-style color palette (from theabsnt / hugo-paper) -- */
+    :root{
+      --bg: #ffffff;           /* page background */
+      --surface: #fafaf8;      /* card / surface */
+      --muted: #6b7280;        /* muted text */
+      --text: #0f1724;         /* primary text */
+      --accent: #1e88e5;       /* links / accents (blue) */
+      --border: #e6e6e6;       /* light border */
+      --foot: #94a3b8;         /* footer muted */
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    header{
+      padding:48px 20px;
+      text-align:center;
+      background: linear-gradient(180deg, var(--surface), var(--bg));
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1{
+      margin:0;
+      font-size:40px;
+      color:var(--text);
+      letter-spacing:1px;
+    }
+
+    .subtitle{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    main{
+      max-width:960px;
+      margin:36px auto;
+      padding:0 18px 60px;
+    }
+
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:8px;
+      padding:22px;
+      margin-bottom:22px;
+      box-shadow: 0 6px 12px rgba(15,23,36,0.03);
+    }
+
+    h2{
+      margin-top:0;
+      color:var(--text);
+      font-size:20px;
+      padding-bottom:8px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    a{
+      color:var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover{ text-decoration: underline; }
+
+    ul{ padding-left:20px; margin:8px 0; color:var(--text); }
+    li{ margin:8px 0; }
+
+    .muted{ color:var(--muted); font-size:14px; }
+
+    .resume-link{
+      display:inline-block;
+      margin-top:8px;
+      padding:8px 12px;
+      border-radius:6px;
+      border:1px solid var(--border);
+      background: #fff;
+      color:var(--accent);
+      font-weight:600;
+    }
+
+    footer{
+      text-align:center;
+      padding:26px 12px;
+      color:var(--foot);
+      font-size:13px;
+      border-top:1px solid var(--border);
+      margin-top:28px;
+      background:transparent;
+    }
+
+    /* small responsive tweaks */
+    @media (max-width:520px){
+      h1{ font-size:28px; }
+      main{ padding:0 12px 40px; }
+    }
+  </style>
 </head>
-
 <body>
-
-<header>
+  <header>
     <h1>ZEROHE XVB</h1>
     <div class="subtitle">Malware Analysis • Threat Research • Detection Engineering</div>
-</header>
+  </header>
 
-<section>
+  <main>
+    <section class="card">
+      <h2>About Me</h2>
+      <p class="muted">
+        Cybersecurity professional with 7+ years experience specializing in:
+        malware analysis, reverse engineering, threat hunting, and detection engineering.
+      </p>
+    </section>
 
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            Cybersecurity professional with 7+ years experience specializing in:
-            malware analysis, reverse engineering, threat hunting, and detection engineering.
-        </p>
-    </div>
+    <section class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>Malware Analysis (Static + Dynamic)</li>
+        <li>Reverse Engineering (Ghidra, IDA, Frida)</li>
+        <li>Detection Engineering (YARA, Sigma, SIEM Rules)</li>
+        <li>Android & Windows Security</li>
+        <li>AI for Threat Detection</li>
+        <li>DFIR & Incident Response</li>
+      </ul>
+    </section>
 
-    <div class="card">
-        <h2>Skills</h2>
-        <ul>
-            <li>🔍 Malware Analysis (Static + Dynamic)</li>
-            <li>⚙ Reverse Engineering (Ghidra, IDA, Frida)</li>
-            <li>🛡 Detection Engineering (YARA, Sigma, SIEM Rules)</li>
-            <li>📱 Android + Windows Security</li>
-            <li>🤖 AI for Threat Detection</li>
-            <li>🚨 DFIR & Incident Response</li>
-        </ul>
-    </div>
+    <section class="card">
+      <h2>Portfolio</h2>
+      <ul>
+        <li><a href="#">Malware Analysis Reports</a></li>
+        <li><a href="#">Detection Engineering Projects</a></li>
+        <li><a href="#">Reverse Engineering Samples</a></li>
+        <li><a href="#">Threat Intel Dashboards</a></li>
+      </ul>
+    </section>
 
-    <div class="card">
-        <h2>Portfolio</h2>
-        <ul>
-            <li><a href="#">Malware Analysis Reports</a></li>
-            <li><a href="#">Detection Engineering Projects</a></li>
-            <li><a href="#">Reverse Engineering Samples</a></li>
-            <li><a href="#">Threat Intel Dashboards</a></li>
-        </ul>
-    </div>
+    <section class="card">
+      <h2>Resume</h2>
+      <a class="resume-link" href="#">Download Resume (PDF)</a>
+    </section>
 
-    <div class="card">
-        <h2>Resume</h2>
-        <p><a href="#">Upload Resume PDF Here</a></p>
-    </div>
+    <section class="card">
+      <h2>Contact</h2>
+      <p class="muted">Email: youremail@domain.com</p>
+      <p><a href="https://github.com/zerohexvb">GitHub</a> • <a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
+    </section>
+  </main>
 
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: yourname@domain.com</p>
-    </div>
+  <footer>
+    © <span id="year"></span> ZEROHE XVB — Cybersecurity Portfolio
+  </footer>
 
-</section>
-
-<footer>
-    © 2025 ZEROHE XVB — Cybersecurity Portfolio
-</footer>
-
+  <script>
+    // small script to set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
