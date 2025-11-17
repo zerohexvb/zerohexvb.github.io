@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="style.css">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ZEROHE XVB | Cybersecurity Portfolio</title>
+  <title>ZEROHEXVB</title>
   <style>
-    /* -- Paper-style color palette (from theabsnt / hugo-paper) -- */
+    /* -- Paper-style color  */
     :root{
-      --bg: #ffffff;           /* page background */
+      --bg: #6c7274;           /* page background */
       --surface: #fafaf8;      /* card / surface */
       --muted: #6b7280;        /* muted text */
       --text: #0f1724;         /* primary text */
-      --accent: #1e88e5;       /* links / accents (blue) */
       --border: #e6e6e6;       /* light border */
       --foot: #94a3b8;         /* footer muted */
     }
@@ -30,7 +30,7 @@
     header{
       padding:48px 20px;
       text-align:center;
-      background: linear-gradient(180deg, var(--surface), var(--bg));
+      background: var(--bg);
       border-bottom: 1px solid var(--border);
     }
 
@@ -43,7 +43,6 @@
 
     .subtitle{
       margin-top:8px;
-      color:var(--muted);
       font-size:15px;
     }
 
@@ -112,55 +111,120 @@
 </head>
 <body>
   <header>
-    <h1>ZEROHE XVB</h1>
+    <h1>ZEROHEXVB</h1>
     <div class="subtitle">Malware Analysis • Threat Research • Detection Engineering</div>
+    <div class="subtitle"><a href="about.html">ABOUT ME</a></div>
   </header>
 
   <main>
-    <section class="card">
-      <h2>About Me</h2>
-      <p class="muted">
-        Cybersecurity professional with 7+ years experience specializing in:
-        malware analysis, reverse engineering, threat hunting, and detection engineering.
-      </p>
-    </section>
+      <h1>MY WORK </h1>
+<section class="card">
+  <h1>Whitepapers</h1>
 
-    <section class="card">
-      <h2>Skills</h2>
-      <ul>
-        <li>Malware Analysis (Static + Dynamic)</li>
-        <li>Reverse Engineering (Ghidra, IDA, Frida)</li>
-        <li>Detection Engineering (YARA, Sigma, SIEM Rules)</li>
-        <li>Android & Windows Security</li>
-        <li>AI for Threat Detection</li>
-        <li>DFIR & Incident Response</li>
-      </ul>
-    </section>
+  <div class="item">
+    <a class="item-title" href="https://www.linkedin.com/in/vaibhavbillade/details/featured/1736844365405/single-media-viewer/?profileId=ACoAABlw5-YB9COGo_lxUDpI8nRwTPX-bEj1404" target="_blank">
+      <h2>VipKeylogger: Unveiling a Multistage Keylogger & Stealer</h2>
+    </a>
+    <p class="item-desc">
+		Email phishing remains one of the most effective techniques used by threat actors. This allows threat actors to deliver malicious payloads through systematically executed attack chains. In are recent campaign, threat actors have been observed exploiting phishing emails to deliver a .NET compiled keylogger designed to steal sensitive user information.    </p>
+  </div>
 
-    <section class="card">
-      <h2>Portfolio</h2>
-      <ul>
-        <li><a href="#">Malware Analysis Reports</a></li>
-        <li><a href="#">Detection Engineering Projects</a></li>
-        <li><a href="#">Reverse Engineering Samples</a></li>
-        <li><a href="#">Threat Intel Dashboards</a></li>
-      </ul>
-    </section>
+  <div class="item">
+    <a class="item-title" href="https://www.linkedin.com/in/vaibhavbillade/details/featured/1723480955038/single-media-viewer/?profileId=ACoAABlw5-YB9COGo_lxUDpI8nRwTPX-bEj1404" target="_blank">
+	<h2>Mallox Ransomware: Tactics, Evolution & Technical Analysis</h2>
+    </a>
+    <p class="item-desc">
+      Mallox (aka TargetCompany) ransomware is targeting unsecured Microsoft SQL Servers to gain access and deploy its payload. Multiple failed login attempts indicate MSSQL brute force attacks as the primary entry method. Once access is obtained, it uses ‘sqlservr.exe’ to execute and distribute malicious files on the victim’s system.
+    </p>
+  </div>
+</section>
 
-    <section class="card">
-      <h2>Resume</h2>
-      <a class="resume-link" href="#">Download Resume (PDF)</a>
-    </section>
 
-    <section class="card">
-      <h2>Contact</h2>
-      <p class="muted">Email: youremail@domain.com</p>
-      <p><a href="https://github.com/zerohexvb">GitHub</a> • <a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
-    </section>
+<section class="card">
+  <h1>Blogs</h1>
+
+  <div class="item">
+    <a class="item-title" href="https://www.seqrite.com/blog/xworm-remcos-bat-svg-malware-analysis/" target="_blank">
+      <h2>Malware Campaign Leveraging SVGs & BAT Scripts to Drop XWorm & Remcos</h2>
+    </a>
+    <p class="item-desc">
+      Recent campaigns use obfuscated BAT-based loaders delivered via ZIP archives hosted on trusted-looking platforms to deploy RATs like XWorm and Remcos. These BAT scripts trigger PowerShell loaders that inject payloads directly into memory for fileless execution. Attackers are also abusing SVG files with embedded JavaScript, marking a shift toward non-traditional formats for malware delivery.
+    </p>
+  </div>
+
+  <div class="item">
+    <a class="item-title" href="https://www.seqrite.com/blog/spear-phishing-campaign-delivers-vip-keylogger-via-email-attachment/" target="_blank">
+      <h2>Spear Phishing Campaign Delivers VIP Keylogger</h2>
+    </a>
+    <p class="item-desc">
+      A new campaign is distributing the VIP keylogger through spear-phishing, but this time using an AutoIt-based injector instead of previous delivery methods. Once executed, the injector deploys the VIP keylogger, which steals credentials from major browsers and logs keystrokes. Attackers favor AutoIt for its easy obfuscation and ability to compile scripts into AV-evading executables.
+    </p>
+  </div>
+
+  <div class="item">
+    <a class="item-title" href="https://blogs.quickheal.com/mallox-ransomware-strikes-unsecured-mssql-servers/" target="_blank">
+      <h2>Mallox Ransomware Strikes Unsecured MSSQL Servers</h2>
+    </a>
+    <p class="item-desc">
+      Mallox (aka TargetCompany) ransomware is targeting unsecured Microsoft SQL Servers to gain access and deploy its payload. Multiple failed login attempts indicate MSSQL brute force attacks as the primary entry method. Once access is obtained, it uses ‘sqlservr.exe’ to execute and distribute malicious files on the victim’s system.
+    </p>
+  </div>
+
+  <div class="item">
+    <a class="item-title" href="https://blogs.quickheal.com/darkrace-ransomware-a-deep-dive-into-its-techniques-and-impact/" target="_blank">
+      <h2>DarkRace Ransomware: Deep Dive into its Techniques & Impact</h2>
+    </a>
+    <p class="item-desc">
+      DarkRace ransomware, inspired by leaked Lockbit code, encrypts files using Salsa20, deletes shadow copies, and terminates processes to maximize damage. It uses mutexes, XML-based configurations, and whitelisting to avoid reinfection and skip critical files. Post-encryption, it removes traces by deleting event logs, dropped files, and restarting the system, highlighting the need for vigilant cybersecurity measures.
+    </p>
+  </div>
+</section>
+
+
+<section class="two-cols">
+	  <h2>Contact</h2>
+	  <p class="social-links">bvaibhav5@domain.com</p>
+
+	  <div class="social-links" right>
+		<a href="https://github.com/zerohexvb" target="_blank" title="GitHub">
+		  <svg height="22" width="22" viewBox="0 0 16 16" fill="#000000">
+			<path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
+			0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+			-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
+			-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
+			0 0 .67-.21 2.2.82a7.65 7.65 0 012-.27c.68 0 1.36.09 2 .27 
+			1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 
+			1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 
+			0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 008 0z"/>
+		  </svg>
+		</a>
+
+		<a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+		  <svg height="22" width="22" viewBox="0 0 24 24" fill="#000000">
+			<path d="M4.98 3.5A2.5 2.5 0 002.5 6c0 1.38 1.12 2.5 2.48 2.5h.02A2.5 
+			2.5 0 007.5 6a2.5 2.5 0 00-2.52-2.5zM3 8.98h3.96V21H3V8.98zM9.5 
+			8.98H13v1.63h.06c.49-.93 1.7-1.91 3.51-1.91 3.76 0 4.46 
+			2.47 4.46 5.67V21H17v-5.94c0-1.42-.03-3.25-1.98-3.25-1.98 
+			0-2.28 1.54-2.28 3.14V21H9.5V8.98z"/>
+		  </svg>
+		</a>
+
+		<a href="https://twitter.com/yourprofile" target="_blank" title="Twitter">
+		  <svg height="22" width="22" viewBox="0 0 24 24" fill="#000000">
+			<path d="M23.4 4.8c-.8.4-1.6.6-2.5.8.9-.5 1.6-1.4 
+			1.9-2.4-.9.5-1.9.9-3 1.1a4.3 4.3 0 00-7.5 2.9c0 .3 0 
+			.6.1.8A12.1 12.1 0 013 4.1a4.3 4.3 0 001.3 5.7c-.7 0-1.4-.2-2-.5v.1c0 
+			2 1.4 3.8 3.3 4.2-.3.1-.7.2-1 .2-.3 0-.5 0-.8-.1a4.3 4.3 
+			0 004 3 8.7 8.7 0 01-5.3 1.8H2a12 12 0 006.6 1.9c7.9 0 
+			12.2-6.5 12.2-12.2v-.6c.8-.5 1.5-1.3 2-2.1z"/>
+		  </svg>
+		</a>
+	  </div>
+</section>
   </main>
 
   <footer>
-    © <span id="year"></span> ZEROHE XVB — Cybersecurity Portfolio
+    © <span id="year"></span> ZEROHEXVB — Cybersecurity
   </footer>
 
   <script>
@@ -169,3 +233,6 @@
   </script>
 </body>
 </html>
+
+
+
